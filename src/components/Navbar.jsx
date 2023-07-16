@@ -7,6 +7,7 @@ import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(false);
 
   return (
     <nav
@@ -21,9 +22,14 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="DeiverLogo" className="w-9 h-9 object-contain" />
-          <p className="text-[18px] font-bold cursor-pointer">
-            Deiver <span>| Developer</span>
+          <img
+            src={logo}
+            alt="DeiverLogo"
+            className="w-9 h-9 object-contain min-w-[145px]"
+          />
+          <p className="text-[18px] font-bold cursor-pointer flex">
+            Deiver &nbsp;
+            <span className="sm:block hidden">|&nbsp; Developer</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -39,6 +45,36 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          <img
+            src={toggle ? close : menu}
+            alt="hamburger menu"
+            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            onClick={() => setToggle(!toggle)}
+          />
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
+            <ul className="list-none flex justify-end items-start flex-col gap-4">
+              {navLinks.map((Link) => (
+                <li
+                  key={Link.id}
+                  className={`${
+                    active === Link.title ? "text-white" : "text-secundary"
+                  } text-[16px] font-medium cursor-pointer`}
+                  onClick={() => {
+                    setActive(Link.title);
+                    setToggle(!toggle);
+                  }}
+                >
+                  <a href={`#${Link.id}`}>{Link.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
   );
