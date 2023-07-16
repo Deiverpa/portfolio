@@ -1,5 +1,14 @@
 import { BrowserRouter } from "react-router-dom";
-import { Contact, Experience } from "./components";
+import {
+  Contact,
+  Experience,
+  Navbar,
+  Hero,
+  About,
+  Works,
+  Feedbacks,
+  StarsCanvas,
+} from "./components";
 
 import TestComponent from "./TestComponent.jsx";
 
@@ -8,10 +17,17 @@ const App = () => {
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <TestComponent />
+          <Navbar />
+          <Hero />
+        </div>
+        <About />
+        <Experience />
+        <Experience />
+        <Works />
+        <Feedbacks />
+        <div className="relative z-0">
+          <StarsCanvas />
           <Contact />
-          <Experience />
-          hola
         </div>
       </div>
     </BrowserRouter>
