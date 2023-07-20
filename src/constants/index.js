@@ -42,22 +42,25 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "FullStack Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Fluent English",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Quick learner",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Modern Frameworks",
     icon: creator,
   },
 ];
+
+const bio =
+  "FullStack Developer with nearly two years of experience building projects with JavaScript and its frameworks such as Node JS, Express JS, and React JS. I am a problem solver, bringing fresh ideas and solutions to real-life challenges.";
 
 const technologies = [
   {
@@ -262,4 +265,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, bio };
