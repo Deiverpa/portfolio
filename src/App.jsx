@@ -8,6 +8,7 @@ import {
   Works,
   Feedbacks,
   StarsCanvas,
+  Tech,
 } from "./components";
 
 import TestComponent from "./TestComponent.jsx";
@@ -22,6 +23,7 @@ const App = () => {
         </div>
         <About />
         <Experience />
+        <Tech />
         <Works />
         <Feedbacks />
         <div className="relative z-0">

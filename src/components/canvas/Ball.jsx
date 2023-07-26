@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const Ball = () => {
+const BallCanvas = ({ icon }) => {
   return (
-    <div>Ball</div>
-  )
-}
+    <div className="flex flex-wrap">
+      {technologies.map((tech, index) => (
+        <TechnologyCard key={index} name={tech.name} icon={tech.icon} />
+      ))}
+    </div>
+  );
+};
 
-export default Ball
+export default BallCanvas;

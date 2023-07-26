@@ -26,6 +26,8 @@ import {
   evonik,
   dh,
   tpearls,
+  express,
+  mySQL,
 } from "../assets";
 
 export const navLinks = [
@@ -67,28 +69,20 @@ const bio =
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
     name: "JavaScript",
     icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
   },
   {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
   },
   {
     name: "Tailwind CSS",
@@ -99,24 +93,16 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Express JS",
+    icon: express,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "My SQL",
+    icon: mySQL,
   },
   {
     name: "git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
   },
 ];
 
