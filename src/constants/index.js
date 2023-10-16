@@ -28,6 +28,7 @@ import {
   tpearls,
   express,
   mySQL,
+  firebase,
 } from "../assets";
 
 export const navLinks = [
@@ -103,6 +104,10 @@ const technologies = [
   {
     name: "git",
     icon: git,
+  },
+  {
+    name: "Firebase",
+    icon: firebase,
   },
 ];
 
